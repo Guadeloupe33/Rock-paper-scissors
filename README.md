@@ -1,4 +1,4 @@
-Rock Paper Scissors Game
+## Rock Paper Scissors Game
 
 This is a simple, interactive **Rock Paper Scissors** game built using **HTML**, **JavaScript**, and **CSS**. Players can choose Rock, Paper, or Scissors to compete against a computer opponent with a randomly selected move.
 
@@ -11,7 +11,6 @@ This is a simple, interactive **Rock Paper Scissors** game built using **HTML**,
 ## Screenshot
 
 ![Rock Paper Scissors Game](screenshot.png)
-<img src="screenshot.png" alt="screeshot">
 
 
 ## How to Use
