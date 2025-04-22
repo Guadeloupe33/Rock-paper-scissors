@@ -1,42 +1,149 @@
-/* style.css */
-
+/* Reset & Base Styles */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Title */
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #1d3557;
+}
+
+/* Game Title */
+.title {
+  font-size: 24px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+
+/* Move Buttons */
+/* Layout - keeps buttons inline */
+.move-button {
+  background: #fff;
+  border: 2px solid #457b9d;
+  border-radius: 12px;
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.move-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image fills the button */
+.move-icon {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.move-button:hover .move-icon {
+  transform: scale(1.1);
+}
+
+
+
+
+
+.result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+  color: #e63946;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
   }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(to right, #74ebd5, #acb6e5);
-    color: #333;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
+}
+
+/* Moves Display */
+.js-moves {
+  font-size: 20px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Scoreboard */
+.score {
+  font-size: 18px;
+  color: #2a9d8f;
+  margin: 15px 0 30px;
+}
+
+/* Buttons: Reset & Auto-Play */
+.reset-score-button,
+.auto-play-button {
+  background-color: #1d3557;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reset-score-button:hover,
+.auto-play-button:hover {
+  background-color: #457b9d;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .move-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .title,
+  .result,
+  .score,
+  .js-moves {
+    font-size: 16px;
+  }
+
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #222;
+    font-size: 28px;
   }
-  
-  button {
-    background-color: #fff;
-    border: none;
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 1.2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-  }
-  
-  button:hover {
-    transform: scale(1.05);
-    background-color: #f0f0f0;
-  }
-  
+}
+.move-result-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 8px;
+  vertical-align: middle;
+  object-fit: contain;
+}
